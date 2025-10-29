@@ -35,6 +35,7 @@ int sandbox(void (*f)(void), unsigned int timeout, bool verbose)
 			return 0;
 		}
 		if (verbose) printf("Bad function: %s\n", strsignal(sig));
+		return 0;
 	}
 	if (WIFEXITED(stat))
 	{
